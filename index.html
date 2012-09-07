@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	
+	<!-- :checked is awesome -->
+	<link href="bootleg-modal.css" rel="stylesheet">
+	<link href="bootleg-dropdowns.css" rel="stylesheet">
+    <link href="bootleg-tabs.css" rel="stylesheet">
+    <link href="bootleg-buttons.css" rel="stylesheet">
+    <link href="bootleg-collapse.css" rel="stylesheet">
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">Get started</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="active">
+                <a href="./index.html">Javascript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">Customize</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead">
+  <div class="container">
+    <h1><del>Javascript</del> <ins>:checked</ins> for Bootstrap</h1>
+    <p class="lead">Bring Bootstrap's components to life&mdash;now with 8 custom CSS plugins that (ab)use checkboxes.
+  </div>
+</header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+          <li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
+          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdown</a></li>
+          <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
+          <li><a href="#buttons"><i class="icon-chevron-right"></i> Button</a></li>
+          <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+          <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+        <section id="overview">
+          <div class="page-header">
+            <h1>Bootstrap components using Bootleg.css</h1>
+          </div>
+
+          <h3>Questionable use of <code>:checked</code> pseudo-class</h3>
+          <p>I created bootleg.css as demonstration of <code>:checked</code> for a talk, serioulsy <strong>don't</strong> use it. Except if you're doing custom checkbox/radios.</p>
+        </section>
+
+        <!-- Modal
+        ================================================== -->
+        <section id="modals">
+          <div class="page-header">
+            <h1>Modals <small>bootleg-modal.css</small></h1>
+          </div>
+
+
+          <h2>Examples</h2>
+          <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+
+          <h3>Static example</h3>
+          <p>A rendered modal with header, body, and set of actions in the footer.</p>
+          <div class="bs-docs-example" style="background-color: #f5f5f5;">
+            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Modal header</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="modal hide fade"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+    &lt;h3&gt;Modal header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>Live demo</h3>
+          <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+          <!-- Modal 1 -->
+		  <label class="btn btn-primary btn-large" for="modal1">Launch demo modal</label>
+		  <input type="radio" id="modal1" name="modal" />
+		  <!-- sample modal content -->
+          <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <label for="closemodal" class="close">&times;</label>
+              <h3 id="myModalLabel">Modal Heading</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Text in a modal</h4>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+              <h4>Popover in a modal</h4>
+              <p>This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.</p>
+
+              <h4>Tooltips in a modal</h4>
+              <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+              <hr>
+
+              <h4>Overflowing text to show optional scrollbar</h4>
+              <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+              <label for="closemodal" class="btn">Close</label>
+              <button class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+		  
+		  <!-- Overlay and close -->
+		  <input type="radio" id="closemodal" name="modal" />
+		  <label for="closemodal" class="modalclose">&nbsp;</label>
+		  
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <label for="modal1" class="btn btn-primary btn-large">Launch demo modal</label>
+          </div>
+<pre class="prettyprint linenums">
+&lt;-- Button to trigger modal --&gt;
+&lt;label for="modal1" role="button" class="btn"&gt;Launch demo modal&lt;/label&gt;
+&lt;input type="radio" id="modal1" name="modal" /&gt;
+
+&lt;-- Modal --&gt;
+&lt;div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;label role="button" class="close" for="closemodal"&gt;&times;&lt;/label&gt;
+    &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;label role="button" class="close" for="closemodal"&gt;Close&lt;/label&gt;
+    &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>Usage</h2>
+
+          <h3>Via data attributes</h3>
+          <p>Activate a modal without writing JavaScript. Set <code>for="modal1"</code> on a controller label along with preceded by an checkbox element.</p>
+          <pre class="prettyprint linenums">&lt;label for="modal1" role="button" class="btn"&gt;Launch modal&lt;/label&gt;</pre>
+
+          <h3>Via JavaScript</h3>
+          <p>Call a modal with id <code>modal1</code> with a single line of JavaScript:</p>
+          <pre class="prettyprint linenums">$('#modal1').attr("checked", true)</pre>
+
+          
+        </section>
+
+
+
+        <!-- Dropdown
+        ================================================== -->
+        <section id="dropdowns">
+          <div class="page-header">
+            <h1>Dropdowns <small>bootleg-dropdown.css</small></h1>
+          </div>
+
+
+          <h2>Examples</h2>
+          <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
+
+          <h3>Within a navbar</h3>
+          <div class="bs-docs-example">
+            <div id="navbar-example" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <a class="brand" href="#">Project Name</a>
+                  <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                      <input type="radio" name="dropdowns" id="dropdown1">
+                      <label for="dropdown1" class="dropdown-toggle">Dropdown <b class="caret"></b></label>
+                      
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li><a tabindex="-1" href="http://google.com">Action</a></li>
+                        <li><a tabindex="-1" href="#anotherAction">Another action</a></li>
+                        <li><a tabindex="-1" href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">Separated link</a></li>
+                      </ul>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                    </li>
+                    <li class="dropdown">
+                      <input type="radio" name="dropdowns" id="dropdown2">
+                      <label for="dropdown2" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></label>
+                      
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                        <li><a tabindex="-1" href="#">Action</a></li>
+                        <li><a tabindex="-1" href="#">Another action</a></li>
+                        <li><a tabindex="-1" href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">Separated link</a></li>
+                      </ul>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                    </li>
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li id="fat-menu" class="dropdown">
+                      <input type="radio" name="dropdowns" id="dropdown3">
+                      <label for="dropdown3" class="dropdown-toggle">Dropdown 3 <b class="caret"></b></label>
+                      
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                        <li><a tabindex="-1" href="#">Action</a></li>
+                        <li><a tabindex="-1" href="#">Another action</a></li>
+                        <li><a tabindex="-1" href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">Separated link</a></li>
+                      </ul>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> <!-- /navbar-example -->
+          </div>
+
+          <input type="radio" checked id="dismissdropdowns" name="dropdowns">
+
+          <h3>Within tabs</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Regular link</a></li>
+              <li class="dropdown">
+                <input type="radio" name="dropdowns" id="dropdown4">
+                <label for="dropdown4" class="dropdown-toggle">Dropdown <b class="caret"></b></label>
+                
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+              </li>
+              <li class="dropdown">
+                <input type="radio" name="dropdowns" id="dropdown5">
+                <label for="dropdown5" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></label>
+                
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+              </li>
+              <li class="dropdown">
+                <input type="radio" name="dropdowns" id="dropdown6">
+                <label for="dropdown6" class="dropdown-toggle">Dropdown 3 <b class="caret"></b></label>
+                
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+              </li>
+            </ul> <!-- /tabs -->
+          </div> 
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>Usage</h2>
+
+          <h3>Via data attributes</h3>
+          <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" href="#"&gt;Dropdown trigger&lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+          <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
+    Dropdown
+    &lt;b class="caret"&gt;&lt;/b&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>Via JavaScript</h3>
+          <p>Call the dropdowns via JavaScript:</p>
+          <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
+
+          <h3>Options</h3>
+          <p><em>None</em></p>
+
+          <h3>Methods</h3>
+          <h4>$().dropdown()</h4>
+          <p>A programatic api for activating menus for a given navbar or tabbed navigation.</p>
+        </section>
+
+
+
+        <!-- Tabs
+        ================================================== -->
+        <section id="tabs">
+          <div class="page-header">
+            <h1>Togglable tabs <small>bootleg-tab.css</small></h1>
+          </div>
+
+
+          <h2>Example tabs</h2>
+          <p>Add quick, dynamic tab functionality to transiton through panes of local content, even via dropdown menus.</p>
+          <div class="bs-docs-example tabs">
+            
+
+            <input type="radio" id="home" name="tabs" checked />
+            <label for="home">Home</label>
+
+            <input type="radio" id="profile" name="tabs" />
+            <label for="profile">Profile</label>
+
+            <input type="radio" id="other" name="tabs" />
+            <label for="other">Other</label>
+
+            <input type="radio" id="misc" name="tabs" />
+            <label for="misc">Misc</label>
+
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+              <div class="tab-pane fade">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown1">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown2">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>Usage</h2>
+          <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
+<pre class="prettyprint linenums">
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})</pre>
+          <p>You can activate individual tabs in several ways:</p>
+<pre class="prettyprint linenums">
+$('#myTab a[href="#profile"]').tab('show'); // Select tab by name
+$('#myTab a:first').tab('show'); // Select first tab
+$('#myTab a:last').tab('show'); // Select last tab
+$('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
+</pre>
+
+          <h3>Markup</h3>
+          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+          <h3>Methods</h3>
+          <h4>$().tab</h4>
+          <p>
+            Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
+          </p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs" id="myTab"&gt;
+  &lt;li class="active"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#myTab a:last').tab('show');
+  })
+&lt;/script&gt;
+</pre>
+
+          <h3>Events</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Event</th>
+               <th>Description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>show</td>
+               <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+            </tr>
+            <tr>
+               <td>shown</td>
+               <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+             </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+$('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target // activated tab
+  e.relatedTarget // previous tab
+})
+</pre>
+        </section>
+
+
+          <!-- Buttons
+          ================================================== -->
+          <section id="buttons">
+            <div class="page-header">
+              <h1>Buttons <small>bootleg-button.css</small></h1>
+            </div>
+
+            <h2>Example uses</h2>
+            <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
+
+            <h4>Single toggle</h4>
+            <p>Add data-toggle="button" to activate toggling on a single button.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <input type="checkbox" id="toggle" data-toggle="button">
+              <label class="btn btn-primary" for="toggle">Single Toggle</label>
+            </div>
+<pre class="prettyprint linenums">
+&lt;input type="checkbox" id="toggle" data-toggle="button"&gt;
+&lt;label for="toggle" class="btn"&gt;Single Toggle&lt;/label&gt;
+</pre>
+
+            <h4>Checkbox</h4>
+            <p>Add data-toggle="buttons-checkbox" for checkbox style toggling on btn-group.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-checkbox">
+                <input type="checkbox" id="group1" data-toggle="button">
+                <label class="btn btn-primary" for="group1">Left</label>
+                
+                <input type="checkbox" id="group2" data-toggle="button">
+                <label class="btn btn-primary" for="group2">Middle</label>
+                
+                <input type="checkbox" id="group3" data-toggle="button">
+                <label class="btn btn-primary" for="group3">Right</label>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;btn-group&quot; data-toggle=&quot;buttons-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;group1&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;group1&quot;&gt;Left&lt;/label&gt;
+  
+  &lt;input type=&quot;checkbox&quot; id=&quot;group2&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;group2&quot;&gt;Middle&lt;/label&gt;
+  
+  &lt;input type=&quot;checkbox&quot; id=&quot;group3&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;group3&quot;&gt;Right&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+
+            <h4>Radio</h4>
+            <p>Add data-toggle="buttons-radio" for radio style toggling on btn-group.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-radio">
+                <input type="radio" id="radio1" name="radio-group" data-toggle="button">
+                <label class="btn btn-primary" for="radio1">Left</label>
+                
+                <input type="radio" id="radio2" name="radio-group" data-toggle="button">
+                <label class="btn btn-primary" for="radio2">Middle</label>
+                
+                <input type="radio" id="radio3" name="radio-group" data-toggle="button">
+                <label class="btn btn-primary" for="radio3">Right</label>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;btn-group&quot; data-toggle=&quot;buttons-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio1&quot; name=&quot;radio-group&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;radio1&quot;&gt;Left&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; id=&quot;radio2&quot; name=&quot;radio-group&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;radio2&quot;&gt;Middle&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;radio-group&quot; data-toggle=&quot;button&quot;&gt;
+  &lt;label class=&quot;btn btn-primary&quot; for=&quot;radio3&quot;&gt;Right&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>Usage</h2>
+            <p>Enable buttons via JavaScript:</p>
+            <pre class="prettyprint linenums">$('.nav-tabs').button()</pre>
+
+            <h3>Markup</h3>
+            <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
+
+            <h3>Options</h3>
+            <p><em>None</em></p>
+
+            <h3>Methods</h3>
+            <h4>$().button('toggle')</h4>
+            <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
+            <div class="alert alert-info">
+              <strong>Heads up!</strong>
+              You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.
+            </div>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button" &gt;&hellip;&lt;/button&gt;</pre>
+            <h4>$().button('loading')</h4>
+            <p>Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.
+            </p>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+            <div class="alert alert-info">
+              <strong>Heads up!</strong>
+              <a href="https://github.com/twitter/bootstrap/issues/793">Firefox persists the disabled state across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>.
+            </div>
+            <h4>$().button('reset')</h4>
+            <p>Resets button state - swaps text to original text.</p>
+            <h4>$().button(string)</h4>
+            <p>Resets button state - swaps text to any data defined text state.</p>
+<pre class="prettyprint linenums">&lt;button type="button" class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
+&lt;script&gt;
+  $('.btn').button('complete')
+&lt;/script&gt;
+</pre>
+          </section>
+
+
+
+          <!-- Collapse
+          ================================================== -->
+          <section id="collapse">
+            <div class="page-header">
+              <h1>Collapse <small>bootleg-collapse.css</small></h1>
+            </div>
+
+            <h3>About</h3>
+            <p>Get base styles and flexible support for collapsible components like accordions and navigation.</p>
+            <p class="muted"><strong>*</strong> Requires the Transitions plugin to be included.</p>
+
+            <h2>Example accordion</h2>
+            <p>Using the collapse plugin, we built a simple accordion style widget:</p>
+
+            <div class="bs-docs-example">
+              <div class="accordion" id="accordion2">
+                <input type="radio" name="accordion-group" id="collapseAll">
+                <div class="accordion-group">
+                  <input type="radio" id="collapse1" name="accordion-group" checked>
+                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <div class="accordion-heading">
+                    <label for="collapse1" class="accordion-toggle">Collapsible Group Item #1</label>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <input type="radio" id="collapse2" name="accordion-group">
+                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <div class="accordion-heading">
+                    <label for="collapse2" class="accordion-toggle">Collapsible Group Item #2</label>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <input type="radio" id="collapse3" name="accordion-group">
+                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <div class="accordion-heading">
+                    <label for="collapse3" class="accordion-toggle">Collapsible Group Item #3</label>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+  simple collapsible
+&lt;/button&gt;
+
+&lt;div id="demo" class="collapse in"&gt; &hellip; &lt;/div&gt;
+</pre>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>Usage</h2>
+
+            <h3>Via data attributes</h3>
+            <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a css selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
+            <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
+
+            <h3>Via JavaScript</h3>
+            <p>Enable manually with:</p>
+            <pre class="prettyprint linenums">$(".collapse").collapse()</pre>
+
+            <h3>Options</h3>
+            <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 100px;">Name</th>
+                 <th style="width: 50px;">type</th>
+                 <th style="width: 50px;">default</th>
+                 <th>description</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>parent</td>
+                 <td>selector</td>
+                 <td>false</td>
+                 <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior)</td>
+               </tr>
+               <tr>
+                 <td>toggle</td>
+                 <td>boolean</td>
+                 <td>true</td>
+                 <td>Toggles the collapsible element on invocation</td>
+               </tr>
+              </tbody>
+            </table>
+
+
+            <h3>Methods</h3>
+            <h4>.collapse(options)</h4>
+            <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
+<pre class="prettyprint linenums">
+$('#myCollapsible').collapse({
+  toggle: false
+})
+</pre>
+            <h4>.collapse('toggle')</h4>
+            <p>Toggles a collapsible element to shown or hidden.</p>
+            <h4>.collapse('show')</h4>
+            <p>Shows a collapsible element.</p>
+            <h4>.collapse('hide')</h4>
+            <p>Hides a collapsible element.</p>
+
+            <h3>Events</h3>
+            <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 150px;">Event</th>
+                 <th>Description</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>show</td>
+                 <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+               </tr>
+               <tr>
+                 <td>shown</td>
+                 <td>This event is fired when a collapse element has been made visible to the user (will wait for css transitions to complete).</td>
+               </tr>
+               <tr>
+                 <td>hide</td>
+                 <td>
+                  This event is fired immediately when the <code>hide</code> method has been called.
+                 </td>
+               </tr>
+               <tr>
+                 <td>hidden</td>
+                 <td>This event is fired when a collapse element has been hidden from the user (will wait for css transitions to complete).</td>
+               </tr>
+              </tbody>
+            </table>
+<pre class="prettyprint linenums">
+$('#myCollapsible').on('hidden', function () {
+  // do something&hellip;
+})</pre>
+          </section>
+
+
+
+           <!-- Carousel
+          ================================================== -->
+          <section id="carousel">
+            <div class="page-header">
+              <h1>Carousel <small>bootleg-carousel.css</small></h1>
+            </div>
+
+            <h2>Example carousel</h2>
+            <p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
+            <div class="bs-docs-example">
+              <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Second Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Third Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;!-- Carousel items --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;&hellip;&lt;/div&gt;
+    &lt;div class="item"&gt;&hellip;&lt;/div&gt;
+    &lt;div class="item"&gt;&hellip;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Carousel nav --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+            <div class="alert alert-warning">
+              <strong>Heads up!</strong>
+              When implementing this carousel, remove the images we have provided and replace them with your own.
+            </div>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>Usage</h2>
+
+            <h3>Via data attributes</h3>
+            <p>...</p>
+
+            <h3>Via JavaScript</h3>
+            <p>Call carousel manually with:</p>
+            <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
+
+            <h3>Options</h3>
+            <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 100px;">Name</th>
+                 <th style="width: 50px;">type</th>
+                 <th style="width: 50px;">default</th>
+                 <th>description</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>interval</td>
+                 <td>number</td>
+                 <td>5000</td>
+                 <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+               </tr>
+               <tr>
+                 <td>pause</td>
+                 <td>string</td>
+                 <td>"hover"</td>
+                 <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
+               </tr>
+              </tbody>
+            </table>
+
+            <h3>Methods</h3>
+            <h4>.carousel(options)</h4>
+            <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
+<pre class="prettyprint linenums">
+$('.carousel').carousel({
+  interval: 2000
+})
+</pre>
+            <h4>.carousel('cycle')</h4>
+            <p>Cycles through the carousel items from left to right.</p>
+            <h4>.carousel('pause')</h4>
+            <p>Stops the carousel from cycling through items.</p>
+            <h4>.carousel(number)</h4>
+            <p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
+            <h4>.carousel('prev')</h4>
+            <p>Cycles to the previous item.</p>
+            <h4>.carousel('next')</h4>
+            <p>Cycles to the next item.</p>
+
+            <h3>Events</h3>
+            <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 150px;">Event</th>
+                 <th>Description</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>slide</td>
+                 <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+               </tr>
+               <tr>
+                 <td>slid</td>
+                 <td>This event is fired when the carousel has completed its slide transition.</td>
+               </tr>
+              </tbody>
+            </table>
+          </section>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com">Read the blog</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Submit issues</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>
