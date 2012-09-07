@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Javascript · Twitter Bootstrap</title>
+    <title>Bootleg.css · Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -13,12 +13,13 @@
     <link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 	
-	<!-- :checked is awesome -->
-	<link href="bootleg-modal.css" rel="stylesheet">
-	<link href="bootleg-dropdowns.css" rel="stylesheet">
+  	<!-- :checked is awesome -->
+  	<link href="bootleg-modal.css" rel="stylesheet">
+  	<link href="bootleg-dropdowns.css" rel="stylesheet">
     <link href="bootleg-tabs.css" rel="stylesheet">
     <link href="bootleg-buttons.css" rel="stylesheet">
     <link href="bootleg-collapse.css" rel="stylesheet">
+    <link href="bootleg-carousel.css" rel="stylesheet">
 	
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -50,25 +51,25 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
-                <a href="./index.html">Home</a>
+                <a href="#">Home</a>
               </li>
               <li class="">
-                <a href="./getting-started.html">Get started</a>
+                <a href="#">Get started</a>
               </li>
               <li class="">
-                <a href="./scaffolding.html">Scaffolding</a>
+                <a href="#">Scaffolding</a>
               </li>
               <li class="">
-                <a href="./base-css.html">Base CSS</a>
+                <a href="#">Base CSS</a>
               </li>
               <li class="">
-                <a href="./components.html">Components</a>
+                <a href="#">Components</a>
               </li>
               <li class="active">
                 <a href="./index.html">Javascript</a>
               </li>
               <li class="">
-                <a href="./customize.html">Customize</a>
+                <a href="#">Customize</a>
               </li>
             </ul>
           </div>
@@ -108,7 +109,7 @@
           </div>
 
           <h3>Questionable use of <code>:checked</code> pseudo-class</h3>
-          <p>I created bootleg.css as demonstration of <code>:checked</code> for a talk, serioulsy <strong>don't</strong> use it. Except if you're doing custom checkbox/radios.</p>
+          <p>I created bootleg-*.css as demonstration of <code>:checked</code> for a talk, seriously <strong>don't</strong> use it. Except if you're doing custom checkbox/radios.</p>
         </section>
 
         <!-- Modal
@@ -127,14 +128,14 @@
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <label for="closemodal" class="close" onclick>&times;</label>
                 <h3>Modal header</h3>
               </div>
               <div class="modal-body">
                 <p>One fine body&hellip;</p>
               </div>
               <div class="modal-footer">
-                <a href="#" class="btn">Close</a>
+                <label for="closemodal" class="btn" onclick>Close</label>
                 <a href="#" class="btn btn-primary">Save changes</a>
               </div>
             </div>
@@ -142,28 +143,28 @@
 <pre class="prettyprint linenums">
 &lt;div class="modal hide fade"&gt;
   &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+    &lt;label role="button" class="close" for="closemodal"&gt;&times;&lt;/label&gt;
     &lt;h3&gt;Modal header&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
     &lt;p&gt;One fine body&hellip;&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
+    &lt;label role="button" class="close" for="closemodal"&gt;Close&lt;/label&gt;
     &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
           <h3>Live demo</h3>
-          <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+          <p>Toggle a modal via <code>:checked</code> by clicking the button below. It will slide down and fade in from the top of the page.</p>
           <!-- Modal 1 -->
-		  <label class="btn btn-primary btn-large" for="modal1">Launch demo modal</label>
-		  <input type="radio" id="modal1" name="modal" />
-		  <!-- sample modal content -->
+    		  <label class="btn btn-primary btn-large" for="modal1" onclick>Launch demo modal</label>
+    		  <input type="radio" id="modal1" name="modal" />
+    		  <!-- sample modal content -->
           <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
-              <label for="closemodal" class="close">&times;</label>
+              <label for="closemodal" class="close" onclick>&times;</label>
               <h3 id="myModalLabel">Modal Heading</h3>
             </div>
             <div class="modal-body">
@@ -188,7 +189,7 @@
               <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
             <div class="modal-footer">
-              <label for="closemodal" class="btn">Close</label>
+              <label for="closemodal" class="btn" onclick>Close</label>
               <button class="btn btn-primary">Save changes</button>
             </div>
           </div>
@@ -198,7 +199,7 @@
 		  <label for="closemodal" class="modalclose">&nbsp;</label>
 		  
           <div class="bs-docs-example" style="padding-bottom: 24px;">
-            <label for="modal1" class="btn btn-primary btn-large">Launch demo modal</label>
+            <label for="modal1" class="btn btn-primary btn-large" onclick>Launch demo modal</label>
           </div>
 <pre class="prettyprint linenums">
 &lt;-- Button to trigger modal --&gt;
@@ -227,13 +228,13 @@
 
           <h2>Usage</h2>
 
-          <h3>Via data attributes</h3>
-          <p>Activate a modal without writing JavaScript. Set <code>for="modal1"</code> on a controller label along with preceded by an checkbox element.</p>
+          <h3>Via for attribute</h3>
+          <p>Activate a modal without writing JavaScript. Set <code>for="modal1"</code> on a controller label preceded by a radio input.</p>
           <pre class="prettyprint linenums">&lt;label for="modal1" role="button" class="btn"&gt;Launch modal&lt;/label&gt;</pre>
 
           <h3>Via JavaScript</h3>
           <p>Call a modal with id <code>modal1</code> with a single line of JavaScript:</p>
-          <pre class="prettyprint linenums">$('#modal1').attr("checked", true)</pre>
+          <pre class="prettyprint linenums">$('#modal1').prop("checked")</pre>
 
           
         </section>
@@ -260,7 +261,7 @@
                   <ul class="nav" role="navigation">
                     <li class="dropdown">
                       <input type="radio" name="dropdowns" id="dropdown1">
-                      <label for="dropdown1" class="dropdown-toggle">Dropdown <b class="caret"></b></label>
+                      <label for="dropdown1" class="dropdown-toggle" onclick>Dropdown <b class="caret"></b></label>
                       
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                         <li><a tabindex="-1" href="http://google.com">Action</a></li>
@@ -269,11 +270,11 @@
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="#">Separated link</a></li>
                       </ul>
-                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
                     </li>
                     <li class="dropdown">
                       <input type="radio" name="dropdowns" id="dropdown2">
-                      <label for="dropdown2" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></label>
+                      <label for="dropdown2" class="dropdown-toggle" onclick>Dropdown 2 <b class="caret"></b></label>
                       
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
                         <li><a tabindex="-1" href="#">Action</a></li>
@@ -282,13 +283,13 @@
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="#">Separated link</a></li>
                       </ul>
-                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
                     </li>
                   </ul>
                   <ul class="nav pull-right">
                     <li id="fat-menu" class="dropdown">
                       <input type="radio" name="dropdowns" id="dropdown3">
-                      <label for="dropdown3" class="dropdown-toggle">Dropdown 3 <b class="caret"></b></label>
+                      <label for="dropdown3" class="dropdown-toggle" onclick>Dropdown 3 <b class="caret"></b></label>
                       
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                         <li><a tabindex="-1" href="#">Action</a></li>
@@ -297,7 +298,7 @@
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="#">Separated link</a></li>
                       </ul>
-                      <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                      <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
                     </li>
                   </ul>
                 </div>
@@ -313,7 +314,7 @@
               <li class="active"><a href="#">Regular link</a></li>
               <li class="dropdown">
                 <input type="radio" name="dropdowns" id="dropdown4">
-                <label for="dropdown4" class="dropdown-toggle">Dropdown <b class="caret"></b></label>
+                <label for="dropdown4" class="dropdown-toggle" onclick>Dropdown <b class="caret"></b></label>
                 
                 <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
                   <li><a tabindex="-1" href="#">Action</a></li>
@@ -322,11 +323,11 @@
                   <li class="divider"></li>
                   <li><a tabindex="-1" href="#">Separated link</a></li>
                 </ul>
-                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
               </li>
               <li class="dropdown">
                 <input type="radio" name="dropdowns" id="dropdown5">
-                <label for="dropdown5" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></label>
+                <label for="dropdown5" class="dropdown-toggle" onclick>Dropdown 2 <b class="caret"></b></label>
                 
                 <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
                   <li><a tabindex="-1" href="#">Action</a></li>
@@ -335,11 +336,11 @@
                   <li class="divider"></li>
                   <li><a tabindex="-1" href="#">Separated link</a></li>
                 </ul>
-                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
               </li>
               <li class="dropdown">
                 <input type="radio" name="dropdowns" id="dropdown6">
-                <label for="dropdown6" class="dropdown-toggle">Dropdown 3 <b class="caret"></b></label>
+                <label for="dropdown6" class="dropdown-toggle" onclick>Dropdown 3 <b class="caret"></b></label>
                 
                 <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
                   <li><a tabindex="-1" href="#">Action</a></li>
@@ -348,7 +349,7 @@
                   <li class="divider"></li>
                   <li><a tabindex="-1" href="#">Separated link</a></li>
                 </ul>
-                <label for="dismissdropdowns" class="dismiss-dropdowns"></label>
+                <label for="dismissdropdowns" class="dismiss-dropdowns" onclick></label>
               </li>
             </ul> <!-- /tabs -->
           </div> 
@@ -363,19 +364,8 @@
           <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
 <pre class="prettyprint linenums">
 &lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" href="#"&gt;Dropdown trigger&lt;/a&gt;
-  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-          <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
-<pre class="prettyprint linenums">
-&lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
-    Dropdown
-    &lt;b class="caret"&gt;&lt;/b&gt;
-  &lt;/a&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;dropdowns&quot; id=&quot;dropdown1&quot;&gt;
+  &lt;label for=&quot;dropdown1&quot; class=&quot;dropdown-toggle&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/label&gt;
   &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
     ...
   &lt;/ul&gt;
@@ -384,14 +374,7 @@
 
           <h3>Via JavaScript</h3>
           <p>Call the dropdowns via JavaScript:</p>
-          <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
-
-          <h3>Options</h3>
-          <p><em>None</em></p>
-
-          <h3>Methods</h3>
-          <h4>$().dropdown()</h4>
-          <p>A programatic api for activating menus for a given navbar or tabbed navigation.</p>
+          <pre class="prettyprint linenums">$('.dropdown-toggle').prop("checked")</pre>
         </section>
 
 
@@ -407,19 +390,18 @@
           <h2>Example tabs</h2>
           <p>Add quick, dynamic tab functionality to transiton through panes of local content, even via dropdown menus.</p>
           <div class="bs-docs-example tabs">
-            
 
             <input type="radio" id="home" name="tabs" checked />
-            <label for="home">Home</label>
+            <label for="home" onclick>Home</label>
 
             <input type="radio" id="profile" name="tabs" />
-            <label for="profile">Profile</label>
+            <label for="profile" onclick>Profile</label>
 
             <input type="radio" id="other" name="tabs" />
-            <label for="other">Other</label>
+            <label for="other" onclick>Other</label>
 
             <input type="radio" id="misc" name="tabs" />
-            <label for="misc">Misc</label>
+            <label for="misc" onclick>Misc</label>
 
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade in">
@@ -442,82 +424,28 @@
 
 
           <h2>Usage</h2>
-          <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
-<pre class="prettyprint linenums">
-$('#myTab a').click(function (e) {
-  e.preventDefault();
-  $(this).tab('show');
-})</pre>
+
           <p>You can activate individual tabs in several ways:</p>
 <pre class="prettyprint linenums">
-$('#myTab a[href="#profile"]').tab('show'); // Select tab by name
-$('#myTab a:first').tab('show'); // Select first tab
-$('#myTab a:last').tab('show'); // Select last tab
-$('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
+$('#myTab #profile').prop('checked'); // Select tab by name
+$('#myTab input:first-of-type').prop('checked'); // Select first tab
+$('#myTab input:last-of-type').prop('checked'); // Select last tab
 </pre>
 
           <h3>Markup</h3>
-          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
+          <p>Each "tab" contains an input and a label, they cannot be nested as it'll defeat the trick of using <code>:checked</code> and CSS doesn't have a parent selector yet.</p>
 <pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs"&gt;
-  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+&lt;input type=&quot;radio&quot; id=&quot;home&quot; name=&quot;tabs&quot; checked /&gt;
+&lt;label for=&quot;home&quot;&gt;Home&lt;/label&gt;
 
-          <h3>Methods</h3>
-          <h4>$().tab</h4>
-          <p>
-            Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
-          </p>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs" id="myTab"&gt;
-  &lt;li class="active"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#messages"&gt;Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#settings"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;input type=&quot;radio&quot; id=&quot;profile&quot; name=&quot;tabs&quot; /&gt;
+&lt;label for=&quot;profile&quot;&gt;Profile&lt;/label&gt;
 
-&lt;div class="tab-content"&gt;
-  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
-&lt;/div&gt;
+&lt;input type=&quot;radio&quot; id=&quot;other&quot; name=&quot;tabs&quot; /&gt;
+&lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;
 
-&lt;script&gt;
-  $(function () {
-    $('#myTab a:last').tab('show');
-  })
-&lt;/script&gt;
-</pre>
-
-          <h3>Events</h3>
-          <table class="table table-bordered table-striped">
-            <thead>
-             <tr>
-               <th style="width: 150px;">Event</th>
-               <th>Description</th>
-             </tr>
-            </thead>
-            <tbody>
-             <tr>
-               <td>show</td>
-               <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-            </tr>
-            <tr>
-               <td>shown</td>
-               <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-             </tr>
-            </tbody>
-          </table>
-<pre class="prettyprint linenums">
-$('a[data-toggle="tab"]').on('shown', function (e) {
-  e.target // activated tab
-  e.relatedTarget // previous tab
-})
-</pre>
+&lt;input type=&quot;radio&quot; id=&quot;misc&quot; name=&quot;tabs&quot; /&gt;
+&lt;label for=&quot;misc&quot;&gt;Misc&lt;/label&gt;</pre>
         </section>
 
 
@@ -535,7 +463,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
             <p>Add data-toggle="button" to activate toggling on a single button.</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <input type="checkbox" id="toggle" data-toggle="button">
-              <label class="btn btn-primary" for="toggle">Single Toggle</label>
+              <label class="btn btn-primary" for="toggle" onclick>Single Toggle</label>
             </div>
 <pre class="prettyprint linenums">
 &lt;input type="checkbox" id="toggle" data-toggle="button"&gt;
@@ -543,17 +471,17 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 </pre>
 
             <h4>Checkbox</h4>
-            <p>Add data-toggle="buttons-checkbox" for checkbox style toggling on btn-group.</p>
+            <p>Using checkboxes to allow toggling of multiple buttons in a group.</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <div class="btn-group" data-toggle="buttons-checkbox">
                 <input type="checkbox" id="group1" data-toggle="button">
-                <label class="btn btn-primary" for="group1">Left</label>
+                <label class="btn btn-primary" for="group1" onclick>Left</label>
                 
                 <input type="checkbox" id="group2" data-toggle="button">
-                <label class="btn btn-primary" for="group2">Middle</label>
+                <label class="btn btn-primary" for="group2" onclick>Middle</label>
                 
                 <input type="checkbox" id="group3" data-toggle="button">
-                <label class="btn btn-primary" for="group3">Right</label>
+                <label class="btn btn-primary" for="group3" onclick>Right</label>
               </div>
             </div>
 <pre class="prettyprint linenums">
@@ -570,17 +498,17 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 </pre>
 
             <h4>Radio</h4>
-            <p>Add data-toggle="buttons-radio" for radio style toggling on btn-group.</p>
+            <p>Use radios to only allow one button in a group to be toggled at a time.</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <div class="btn-group" data-toggle="buttons-radio">
                 <input type="radio" id="radio1" name="radio-group" data-toggle="button">
-                <label class="btn btn-primary" for="radio1">Left</label>
+                <label class="btn btn-primary" for="radio1" onclick>Left</label>
                 
                 <input type="radio" id="radio2" name="radio-group" data-toggle="button">
-                <label class="btn btn-primary" for="radio2">Middle</label>
+                <label class="btn btn-primary" for="radio2" onclick>Middle</label>
                 
                 <input type="radio" id="radio3" name="radio-group" data-toggle="button">
-                <label class="btn btn-primary" for="radio3">Right</label>
+                <label class="btn btn-primary" for="radio3" onclick>Right</label>
               </div>
             </div>
 <pre class="prettyprint linenums">
@@ -594,46 +522,6 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
   &lt;input type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;radio-group&quot; data-toggle=&quot;button&quot;&gt;
   &lt;label class=&quot;btn btn-primary&quot; for=&quot;radio3&quot;&gt;Right&lt;/label&gt;
 &lt;/div&gt;
-</pre>
-
-
-            <hr class="bs-docs-separator">
-
-
-            <h2>Usage</h2>
-            <p>Enable buttons via JavaScript:</p>
-            <pre class="prettyprint linenums">$('.nav-tabs').button()</pre>
-
-            <h3>Markup</h3>
-            <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
-
-            <h3>Options</h3>
-            <p><em>None</em></p>
-
-            <h3>Methods</h3>
-            <h4>$().button('toggle')</h4>
-            <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
-            <div class="alert alert-info">
-              <strong>Heads up!</strong>
-              You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.
-            </div>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button" &gt;&hellip;&lt;/button&gt;</pre>
-            <h4>$().button('loading')</h4>
-            <p>Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.
-            </p>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
-            <div class="alert alert-info">
-              <strong>Heads up!</strong>
-              <a href="https://github.com/twitter/bootstrap/issues/793">Firefox persists the disabled state across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>.
-            </div>
-            <h4>$().button('reset')</h4>
-            <p>Resets button state - swaps text to original text.</p>
-            <h4>$().button(string)</h4>
-            <p>Resets button state - swaps text to any data defined text state.</p>
-<pre class="prettyprint linenums">&lt;button type="button" class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
-&lt;script&gt;
-  $('.btn').button('complete')
-&lt;/script&gt;
 </pre>
           </section>
 
@@ -658,9 +546,9 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 <input type="radio" name="accordion-group" id="collapseAll">
                 <div class="accordion-group">
                   <input type="radio" id="collapse1" name="accordion-group" checked>
-                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <label for="collapseAll" class="accordion-dismiss" onclick></label>
                   <div class="accordion-heading">
-                    <label for="collapse1" class="accordion-toggle">Collapsible Group Item #1</label>
+                    <label for="collapse1" class="accordion-toggle" onclick>Collapsible Group Item #1</label>
                   </div>
                   <div id="collapseOne" class="accordion-body collapse">
                     <div class="accordion-inner">
@@ -670,9 +558,9 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 </div>
                 <div class="accordion-group">
                   <input type="radio" id="collapse2" name="accordion-group">
-                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <label for="collapseAll" class="accordion-dismiss" onclick></label>
                   <div class="accordion-heading">
-                    <label for="collapse2" class="accordion-toggle">Collapsible Group Item #2</label>
+                    <label for="collapse2" class="accordion-toggle" onclick>Collapsible Group Item #2</label>
                   </div>
                   <div id="collapseTwo" class="accordion-body collapse">
                     <div class="accordion-inner">
@@ -682,9 +570,9 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 </div>
                 <div class="accordion-group">
                   <input type="radio" id="collapse3" name="accordion-group">
-                  <label for="collapseAll" class="accordion-dismiss"></label>
+                  <label for="collapseAll" class="accordion-dismiss" onclick></label>
                   <div class="accordion-heading">
-                    <label for="collapse3" class="accordion-toggle">Collapsible Group Item #3</label>
+                    <label for="collapse3" class="accordion-toggle" onclick>Collapsible Group Item #3</label>
                   </div>
                   <div id="collapseThree" class="accordion-body collapse">
                     <div class="accordion-inner">
@@ -695,11 +583,16 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
               </div>
             </div>
 <pre class="prettyprint linenums">
-&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
-  simple collapsible
-&lt;/button&gt;
-
-&lt;div id="demo" class="collapse in"&gt; &hellip; &lt;/div&gt;
+&lt;input type=&quot;radio&quot; id=&quot;collapse1&quot; name=&quot;accordion-group&quot; checked&gt;
+&lt;label for=&quot;collapseAll&quot; class=&quot;accordion-dismiss&quot;&gt;&lt;/label&gt;
+&lt;div class=&quot;accordion-heading&quot;&gt;
+  &lt;label for=&quot;collapse1&quot; class=&quot;accordion-toggle&quot;&gt;Collapsible Group Item #1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse&quot;&gt;
+  &lt;div class=&quot;accordion-inner&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
 
@@ -708,91 +601,8 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
             <h2>Usage</h2>
 
-            <h3>Via data attributes</h3>
-            <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a css selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
-            <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
-
-            <h3>Via JavaScript</h3>
-            <p>Enable manually with:</p>
-            <pre class="prettyprint linenums">$(".collapse").collapse()</pre>
-
-            <h3>Options</h3>
-            <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
-            <table class="table table-bordered table-striped">
-              <thead>
-               <tr>
-                 <th style="width: 100px;">Name</th>
-                 <th style="width: 50px;">type</th>
-                 <th style="width: 50px;">default</th>
-                 <th>description</th>
-               </tr>
-              </thead>
-              <tbody>
-               <tr>
-                 <td>parent</td>
-                 <td>selector</td>
-                 <td>false</td>
-                 <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior)</td>
-               </tr>
-               <tr>
-                 <td>toggle</td>
-                 <td>boolean</td>
-                 <td>true</td>
-                 <td>Toggles the collapsible element on invocation</td>
-               </tr>
-              </tbody>
-            </table>
-
-
-            <h3>Methods</h3>
-            <h4>.collapse(options)</h4>
-            <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
-<pre class="prettyprint linenums">
-$('#myCollapsible').collapse({
-  toggle: false
-})
-</pre>
-            <h4>.collapse('toggle')</h4>
-            <p>Toggles a collapsible element to shown or hidden.</p>
-            <h4>.collapse('show')</h4>
-            <p>Shows a collapsible element.</p>
-            <h4>.collapse('hide')</h4>
-            <p>Hides a collapsible element.</p>
-
-            <h3>Events</h3>
-            <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
-            <table class="table table-bordered table-striped">
-              <thead>
-               <tr>
-                 <th style="width: 150px;">Event</th>
-                 <th>Description</th>
-               </tr>
-              </thead>
-              <tbody>
-               <tr>
-                 <td>show</td>
-                 <td>This event fires immediately when the <code>show</code> instance method is called.</td>
-               </tr>
-               <tr>
-                 <td>shown</td>
-                 <td>This event is fired when a collapse element has been made visible to the user (will wait for css transitions to complete).</td>
-               </tr>
-               <tr>
-                 <td>hide</td>
-                 <td>
-                  This event is fired immediately when the <code>hide</code> method has been called.
-                 </td>
-               </tr>
-               <tr>
-                 <td>hidden</td>
-                 <td>This event is fired when a collapse element has been hidden from the user (will wait for css transitions to complete).</td>
-               </tr>
-              </tbody>
-            </table>
-<pre class="prettyprint linenums">
-$('#myCollapsible').on('hidden', function () {
-  // do something&hellip;
-})</pre>
+            <h3>Via checked attribute</h3>
+            <p>To make one open by default set the <code>checked</code> attribute on the radio input.</p>
           </section>
 
 
@@ -807,45 +617,95 @@ $('#myCollapsible').on('hidden', function () {
             <h2>Example carousel</h2>
             <p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
             <div class="bs-docs-example">
-              <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <div id="slider" class="carousel slide">
+                
+              
+                <!-- Slider Setup -->
+              
+                <input type="radio" id="slide1" name="slider" checked>
+                <input type="radio" id="slide2" name="slider">
+                <input type="radio" id="slide3" name="slider">
+                <input type="radio" id="slide4" name="slider">
+                <input type="radio" id="slide5" name="slider">
+              
+              
+                <!-- The Slider -->
+                
+                <div class="slides">
+                
+                  <div class="carousel-inner">
+                    <div class="item">
+                      <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                      <div class="carousel-caption">
+                        <h4>First Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                      <div class="carousel-caption">
+                        <h4>Second Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                      <div class="carousel-caption">
+                        <h4>Third Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                      <div class="carousel-caption">
+                        <h4>First Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                      <div class="carousel-caption">
+                        <h4>Second Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                
+                </div> <!-- #slides -->
+              
+              
+                <!-- Controls and Active Slide Display -->
+              
+                <div id="controls">
+
+                  <label for="slide1" class="carousel-control" onclick><span>&lsaquo;</span><span>&rsaquo;</span></label>
+                  <label for="slide2" class="carousel-control" onclick><span>&lsaquo;</span><span>&rsaquo;</span></label>
+                  <label for="slide3" class="carousel-control" onclick><span>&lsaquo;</span><span>&rsaquo;</span></label>
+                  <label for="slide4" class="carousel-control" onclick><span>&lsaquo;</span><span>&rsaquo;</span></label>
+                  <label for="slide5" class="carousel-control" onclick><span>&lsaquo;</span><span>&rsaquo;</span></label>
+                
+                </div> <!-- #controls -->
+              
               </div>
-            </div>
 <pre class="prettyprint linenums">
 &lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;!-- Carousel radios, add checked attribute to set initial active slide --&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;slide1&quot; name=&quot;slider&quot; checked&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;slide2&quot; name=&quot;slider&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;slide3&quot; name=&quot;slider&quot;&gt;
+
   &lt;!-- Carousel items --&gt;
   &lt;div class="carousel-inner"&gt;
-    &lt;div class="active item"&gt;&hellip;&lt;/div&gt;
+    &lt;div class="item"&gt;&hellip;&lt;/div&gt;
     &lt;div class="item"&gt;&hellip;&lt;/div&gt;
     &lt;div class="item"&gt;&hellip;&lt;/div&gt;
   &lt;/div&gt;
   &lt;!-- Carousel nav --&gt;
-  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
-  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+  &lt;div id=&quot;controls&quot;&gt;
+    &lt;label for=&quot;slide1&quot; class=&quot;carousel-control&quot;&gt;&lt;span&gt;&amp;lsaquo;&lt;/span&gt;&lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/label&gt;
+    &lt;label for=&quot;slide2&quot; class=&quot;carousel-control&quot;&gt;&lt;span&gt;&amp;lsaquo;&lt;/span&gt;&lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/label&gt;
+    &lt;label for=&quot;slide3&quot; class=&quot;carousel-control&quot;&gt;&lt;span&gt;&amp;lsaquo;&lt;/span&gt;&lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -855,84 +715,7 @@ $('#myCollapsible').on('hidden', function () {
             </div>
 
 
-            <hr class="bs-docs-separator">
-
-
-            <h2>Usage</h2>
-
-            <h3>Via data attributes</h3>
-            <p>...</p>
-
-            <h3>Via JavaScript</h3>
-            <p>Call carousel manually with:</p>
-            <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
-
-            <h3>Options</h3>
-            <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
-            <table class="table table-bordered table-striped">
-              <thead>
-               <tr>
-                 <th style="width: 100px;">Name</th>
-                 <th style="width: 50px;">type</th>
-                 <th style="width: 50px;">default</th>
-                 <th>description</th>
-               </tr>
-              </thead>
-              <tbody>
-               <tr>
-                 <td>interval</td>
-                 <td>number</td>
-                 <td>5000</td>
-                 <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
-               </tr>
-               <tr>
-                 <td>pause</td>
-                 <td>string</td>
-                 <td>"hover"</td>
-                 <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
-               </tr>
-              </tbody>
-            </table>
-
-            <h3>Methods</h3>
-            <h4>.carousel(options)</h4>
-            <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
-<pre class="prettyprint linenums">
-$('.carousel').carousel({
-  interval: 2000
-})
-</pre>
-            <h4>.carousel('cycle')</h4>
-            <p>Cycles through the carousel items from left to right.</p>
-            <h4>.carousel('pause')</h4>
-            <p>Stops the carousel from cycling through items.</p>
-            <h4>.carousel(number)</h4>
-            <p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
-            <h4>.carousel('prev')</h4>
-            <p>Cycles to the previous item.</p>
-            <h4>.carousel('next')</h4>
-            <p>Cycles to the next item.</p>
-
-            <h3>Events</h3>
-            <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
-            <table class="table table-bordered table-striped">
-              <thead>
-               <tr>
-                 <th style="width: 150px;">Event</th>
-                 <th>Description</th>
-               </tr>
-              </thead>
-              <tbody>
-               <tr>
-                 <td>slide</td>
-                 <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
-               </tr>
-               <tr>
-                 <td>slid</td>
-                 <td>This event is fired when the carousel has completed its slide transition.</td>
-               </tr>
-              </tbody>
-            </table>
+            
           </section>
 
 
@@ -951,6 +734,7 @@ $('.carousel').carousel({
         <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
         <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>No checkboxes were hurt in the making of this demo <a href="http://twitter.com/ryanseddon" target="_blank">@ryanseddon</a>.</p>
         <ul class="footer-links">
           <li><a href="http://blog.getbootstrap.com">Read the blog</a></li>
           <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Submit issues</a></li>

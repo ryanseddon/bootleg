@@ -65,6 +65,7 @@
 	background: transparent !important;
 	line-height: 0;
 	cursor: default;
+	-webkit-tap-highlight-color: transparent;
 }
 #dropdowns input[type="radio"]:checked ~ .dismiss-dropdowns {
 	display: block;
