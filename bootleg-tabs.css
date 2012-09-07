@@ -1,0 +1,58 @@
+/*
+ * The CSS UI Framework
+ * http://www.thecssninja.com/css/cssui-framework
+ *
+ * Copyright (c) 2010 Ryan Seddon 
+ * released under the Creative Commons Attribution 3.0 Licence
+ * http://creativecommons.org/licenses/by/3.0/au/
+ */
+
+#tabs input[type="radio"] {
+	opacity: 0;
+	position: fixed;
+}
+
+#tabs .tab-content {
+	clear: both;
+	border-top: 1px solid #ddd;
+	padding-top: 5px;
+}
+
+.tabs input[type="radio"]:checked + label {
+	color: #555;
+	cursor: default;
+	background-color: white;
+	border: 1px solid #DDD;
+	border-bottom-color: transparent;
+	position: relative;
+    top: 1px;
+    padding: 7px 12px 9px;
+    cursor: default;
+}
+
+.tabs > label {
+	padding: 8px 12px;
+	line-height: 20px;
+	border: 1px solid transparent;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	margin: 0 2px 0 0;
+	float: left;
+	cursor: pointer;
+}
+
+.tabs > label:hover {
+	background-color: #EEE;
+	color: #005580;
+}
+
+.tabs [type="radio"]:nth-of-type(1):checked ~ .tab-content > div:nth-of-type(1),
+.tabs [type="radio"]:nth-of-type(2):checked ~ .tab-content > div:nth-of-type(2),
+.tabs [type="radio"]:nth-of-type(3):checked ~ .tab-content > div:nth-of-type(3),
+.tabs [type="radio"]:nth-of-type(4):checked ~ .tab-content > div:nth-of-type(4),
+.tabs [type="radio"]:nth-of-type(5):checked ~ .tab-content > div:nth-of-type(5),
+.tabs [type="radio"]:nth-of-type(6):checked ~ .tab-content > div:nth-of-type(6) {
+	display: block;
+	opacity: 1;
+}
