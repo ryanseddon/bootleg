@@ -24,6 +24,9 @@
 #controls label span {
  	display: none;
 }
+#controls label {
+    cursor: pointer;
+}
 
 #slide1:checked ~ .slides .carousel-inner {
     margin-left: 0;

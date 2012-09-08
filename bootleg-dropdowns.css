@@ -53,10 +53,6 @@
 	border-bottom-color: white;
 }
 
-#dropdowns input[type="radio"]:checked ~ .dropdown-menu {
-	display: block;
-}
-
 #dropdowns input[type="radio"] ~ .dismiss-dropdowns {
 	display: none;
 	position: fixed;
@@ -71,6 +67,8 @@
 	cursor: default;
 	-webkit-tap-highlight-color: transparent;
 }
+
+#dropdowns input[type="radio"]:checked ~ .dropdown-menu,
 #dropdowns input[type="radio"]:checked ~ .dismiss-dropdowns {
 	display: block;
 }
