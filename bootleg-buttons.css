@@ -1,7 +1,9 @@
-#buttons input {
-	opacity: 0;
-	position: absolute;
-}
+/*
+ * Bootleg.css
+ * https://github.com/ryanseddon/bootleg
+ *
+ * WTFPL - http://sam.zoy.org/wtfpl/
+ */
 
 /* Toggle buttons */
 
@@ -14,7 +16,7 @@
     outline: 0 none;
 }
 
-/* Buton groups */
+/* Button groups */
 
 .btn-group > .btn:first-of-type {
     border-bottom-left-radius: 4px;

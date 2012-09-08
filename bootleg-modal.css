@@ -1,3 +1,10 @@
+/*
+ * Bootleg.css
+ * https://github.com/ryanseddon/bootleg
+ *
+ * WTFPL - http://sam.zoy.org/wtfpl/
+ */
+
 #modals input + .modalclose {
 	-webkit-transition: opacity 0.3s linear 0.3s;
 	   -moz-transition: opacity 0.3s linear 0.3s;
@@ -12,10 +19,6 @@
 	right: 0;
 	z-index: -1;
 	opacity: 0;
-}
-#modals input {
-	opacity: 0;
-	position: absolute;
 }
 #modals input + .modal {
 	left: 50%;

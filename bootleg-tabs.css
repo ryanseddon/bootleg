@@ -1,16 +1,9 @@
 /*
- * The CSS UI Framework
- * http://www.thecssninja.com/css/cssui-framework
+ * Bootleg.css
+ * https://github.com/ryanseddon/bootleg
  *
- * Copyright (c) 2010 Ryan Seddon 
- * released under the Creative Commons Attribution 3.0 Licence
- * http://creativecommons.org/licenses/by/3.0/au/
+ * WTFPL - http://sam.zoy.org/wtfpl/
  */
-
-#tabs input[type="radio"] {
-	opacity: 0;
-	position: fixed;
-}
 
 #tabs .tab-content {
 	clear: both;
