@@ -6,11 +6,11 @@
  */
 
 #modals input + .modalclose {
-	-webkit-transition: opacity 0.3s linear 0.3s;
-	   -moz-transition: opacity 0.3s linear 0.3s;
-		-ms-transition: opacity 0.3s linear 0.3s;
-		 -o-transition: opacity 0.3s linear 0.3s;
-			transition: opacity 0.3s linear 0.3s;
+	-webkit-transition: opacity 0.3s linear;
+	   -moz-transition: opacity 0.3s linear;
+		-ms-transition: opacity 0.3s linear;
+		 -o-transition: opacity 0.3s linear;
+			transition: opacity 0.3s linear;
 			
 	position: fixed;
 	top: 0;
