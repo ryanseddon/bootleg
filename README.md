@@ -2,7 +2,7 @@
 
 ## First study this image
 
-![](http://www.thecssninja.com/i/its-a-hack.png)
+![](https://www.ryanseddon.com/i/its-a-hack.png)
 
 ## Checkboxes in the house
 
